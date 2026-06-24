@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { SITE } from "../lib/blog-data.js";
+---
+
+<BaseLayout
+  title={`CV - ${SITE.name}`}
+  description={`Curriculum Vitae for ${SITE.name}: Academic credentials, quantitative research milestones, and structural competencies.`}
+  canonical="/cv"
+>
+  <div class="mx-auto max-w-3xl px-5 py-12">
+    <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "CV" }]} />
+
+    <header class="mt-6">
+      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">Credentials</div>
+      <h1 class="mt-2 font-serif text-5xl font-semibold leading-[1.05] tracking-tight">
+        Curriculum Vitae
+      </h1>
+    </header>
+
+    <div class="prose-article mt-10">
+      <h2 id="education">Education</h2>
+      <p>
+        <strong>McMaster University</strong> <span class="font-mono text-xs text-muted-foreground float-right">Expected 2028</span><br />
+        Integrated Biomedical Engineering &amp; Health Sciences (iBioMed)<br />
+        <span class="text-sm text-muted-foreground italic">Specialization: Chemical Engineering &amp; Honours Neuroscience (Concurrent Degree Tracking)</span>
+      </p>
+      <ul>
+        <li>Cumulative GPA: <strong>3.93</strong> on the McMaster scale</li>
+        <li>Sustained placement on the <strong>Dean’s Honour List</strong></li>
+      </ul>
+
+      <h2 id="research">Research Experience</h2>
+      <p>
+        <strong>Research Assistant</strong> &mdash; <em>The Zhang Lab, McMaster University</em> <span class="font-mono text-xs text-muted-foreground float-right">May 2026 &mdash; Present</span>
+      </p>
+      <ul>
+        <li>Executing full-time laboratory research focused on the mechanical characterization of engineered tissue models and synthetic hydrogels.</li>
+        <li>Utilizing advanced micro-indentation systems to calculate structural material properties, including Young's and Sneddon's moduli.</li>
+        <li>Sourcing and optimizing experimental protocols to resolve mechanical property data processing bottlenecks.</li>
+      </ul>
+
+      <h2 id="engineering-projects">Engineering &amp; Hardware Design</h2>
+      <p>
+        <strong>Custom Laboratory Prototyping</strong> &mdash; <em>Hardware Innovation</em> <span class="font-mono text-xs text-muted-foreground float-right">June 2026</span>
+      </p>
+      <ul>
+        <li>Designed and prototyped a custom, 3D-printed sliding stand integrated with linear rails to facilitate high-precision well-plate testing workflows.</li>
+      </ul>
+
+      <h2 id="technical-competencies">Technical Competencies</h2>
+      <p>
+        <strong>Laboratory &amp; Quantitative:</strong> Mechanical characterization and indentation testing, synthetic hydrogel data models, material structural analysis, and statistical data processing.
+      </p>
+      <p>
+        <strong>Engineering &amp; Digital:</strong> CAD prototyping, 3D printing mechanics, Git/GitHub source deployment, Astro web architecture, and advanced Microsoft Excel formula optimization.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

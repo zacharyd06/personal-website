@@ -4,9 +4,12 @@ import { SITE } from "../lib/blog-data.js";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/blog", label: "Writing" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { to: "/research", label: "Research" },
+  { to: "/clinical", label: "Clinical" },
+  { to: "/engineering", label: "Engineering" },
+  { to: "/craftsmanship", label: "Craftsmanship" },
+  { to: "/curriculum-vitae", label: "Curriculum Vitae" },
+  { to: "/contact", label: "Contact" }
 ];
 
 const current = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -58,13 +61,6 @@ const iconClass = isHome
       >
         <Icon name="search" class="h-4 w-4" />
       </button>
-      <a
-        href="/rss.xml"
-        aria-label="RSS feed"
-        class={`${iconClass} hidden sm:inline-flex`}
-      >
-        <Icon name="rss" class="h-4 w-4" />
-      </a>
       <button
         type="button"
         data-theme-toggle
@@ -93,8 +89,8 @@ const iconClass = isHome
       <input
         data-search-input
         name="q"
-        aria-label="Search essays, field notes, interviews"
-        placeholder="Search essays, field notes, interviews..."
+        aria-label="Search research, projects, experiences"
+        placeholder="Search research, projects, experiences..."
         class="w-full border-0 bg-transparent py-2 font-serif text-lg outline-none placeholder:text-muted-foreground"
       />
     </form>
