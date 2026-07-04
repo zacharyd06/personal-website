@@ -93,6 +93,16 @@ export const formatDate = (iso) =>
 export const SITE = {
   name: "Zachary Droogendyk",
   description:
-    "An independent magazine on writing, design, and the slow web. Published occasionally, read closely.",
+    "iBioMed and Neuroscience student at McMaster University. Researching brain pathology, molecular mechanisms, and the tools to study them.",
   url: siteUrl,
+  ibiomedurl: "https://www.eng.mcmaster.ca/ibiomed/",
+  neuroscienceurl: "https://pnb.mcmaster.ca/undergraduate/pnb-programs/honours-bsc-neuro/",
+  mcmasterurl: "https://www.mcmaster.ca/",
+  healthsciencesurl: "https://healthsci.mcmaster.ca/",
+  chemicalengineeringul: "https://www.eng.mcmaster.ca/chemeng/",
+  lifesceincesurl: "https://future.mcmaster.ca/programs/lifesci/",
+  orcsurl: "https://orcschool.ca",
+  rcmurl: "https://www.rcmusic.com",
+  bzhanglabulr: "https://bzhanglab.com",
+  imvurl: "https://mirc.mcmaster.ca/education/undergraduate-courses/#tab-content-year-3-courses",
 };

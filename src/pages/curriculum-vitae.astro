@@ -10,51 +10,163 @@ import { SITE } from "../lib/blog-data.js";
   canonical="/cv"
 >
   <div class="mx-auto max-w-3xl px-5 py-12">
-    <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "CV" }]} />
+    <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Curriculum Vitae" }]} />
 
     <header class="mt-6">
-      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">Credentials</div>
-      <h1 class="mt-2 font-serif text-5xl font-semibold leading-[1.05] tracking-tight">
+      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">
         Curriculum Vitae
+      </div>
+      <h1 class="mt-2 font-serif text-5xl font-semibold leading-[1.05] tracking-tight">
+        My Credentials.
       </h1>
     </header>
 
     <div class="prose-article mt-10">
       <h2 id="education">Education</h2>
       <p>
-        <strong>McMaster University</strong> <span class="font-mono text-xs text-muted-foreground float-right">Expected 2028</span><br />
-        Integrated Biomedical Engineering &amp; Health Sciences (iBioMed)<br />
-        <span class="text-sm text-muted-foreground italic">Specialization: Chemical Engineering &amp; Honours Neuroscience (Concurrent Degree Tracking)</span>
+        <strong>
+          <a
+            href={SITE.mcmasterurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            McMaster University
+          </a>
+        </strong>, Hamilton, ON <span class="font-mono text-xs text-muted-foreground float-right"
+          >September 2024 - June 2029 (Expected)</span
+        ><br />
+        B.Eng. BME, <a
+            href={SITE.ibiomedurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            Integrated Biomedical Engineering & Health Sciences (iBioMed)
+          </a><br />
+        <span class="text-sm text-muted-foreground italic"
+          >Specialization: <a
+            href={SITE.chemicalengineeringurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            Chemical Engineering
+          </a><br /></span
+        >
+        H.B.Sc., <a
+            href={SITE.lifesceincesurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            Life Sciences
+          </a> (concurrent degree seeking)<br />
+        <span class="text-sm text-muted-foreground italic"
+          >Specialization: <a
+            href={SITE.neuroscienceurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            Honours Neuroscience
+          </a></span
+        >
       </p>
       <ul>
-        <li>Cumulative GPA: <strong>3.93</strong> on the McMaster scale</li>
-        <li>Sustained placement on the <strong>Dean’s Honour List</strong></li>
+        <li>Concurrent Certificate in <a
+            href={SITE.imvurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            <strong>Immunology, Microbiology, & Virology</strong> (IMV)</a></li>
+      </ul>
+      <p>
+        <strong><a
+            href={SITE.orcsurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            Oxford Reformed Christian School
+          </a>,</strong> Mt. Elgin, ON <span
+          class="font-mono text-xs text-muted-foreground float-right"
+          >September 2020 - June 2024</span
+        ><br />
+        Ontario Secondary School Diploma (OSSD)<br />
+        Oxford Reformed Christian Secondary School Diploma (ORCSSD)<br />
+      </p>
+      <ul>
+        <li>Cumulative GPA: <strong>97%</strong></li>
+        <li>Student Parliament <strong>Class Representative</strong> (20/21), <strong>Secretary</strong> (22/23), and <strong>Vice President</strong> (23/24)</li>
+        <li>Team <strong>captain</strong> for varsity <strong>basketball</strong> and <strong>badminton</strong> teams.</li>
+        <li>Team member on varsity <strong>soccer</strong>, <strong>volleyball</strong>, and <strong>baseball</strong> teams.</li>
+        <li><strong>Robotics Club</strong> member</li>
+        <li><strong>Athletics Council</strong> member</li>
+      </ul>
+      <p>
+        <strong><a
+            href={SITE.rcmurl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="!text-current !no-underline hover:!underline"
+          >
+            The Royal Conservatory of Music
+          </a>,</strong> Toronto, ON <span
+          class="font-mono text-xs text-muted-foreground float-right"
+          >September 2016 - June 2022</span
+        ><br />
+        Level 8 Theory<br />
+        Level 8 Piano<br />
+      </p>
+      <ul>
+        <li>Cumulative GPA: <strong>90%</strong></li>
+        <li><strong>First Class Honours</strong> with Distinction</li>
       </ul>
 
       <h2 id="research">Research Experience</h2>
       <p>
-        <strong>Research Assistant</strong> &mdash; <em>The Zhang Lab, McMaster University</em> <span class="font-mono text-xs text-muted-foreground float-right">May 2026 &mdash; Present</span>
+        <strong>Research Assistant</strong> &mdash; <em>The Zhang Lab, McMaster University</em>
+        <span class="font-mono text-xs text-muted-foreground float-right"
+          >May 2026 &mdash; Present</span
+        >
       </p>
       <ul>
-        <li>Executing full-time laboratory research focused on the mechanical characterization of engineered tissue models and synthetic hydrogels.</li>
-        <li>Utilizing advanced micro-indentation systems to calculate structural material properties, including Young's and Sneddon's moduli.</li>
-        <li>Sourcing and optimizing experimental protocols to resolve mechanical property data processing bottlenecks.</li>
+        <li>
+          Executing full-time laboratory research focused on the mechanical characterization of
+          engineered tissue models and synthetic hydrogels.
+        </li>
+        <li>
+          Utilizing advanced micro-indentation systems to calculate structural material properties,
+          including Young's and Sneddon's moduli.
+        </li>
+        <li>
+          Sourcing and optimizing experimental protocols to resolve mechanical property data
+          processing bottlenecks.
+        </li>
       </ul>
 
       <h2 id="engineering-projects">Engineering &amp; Hardware Design</h2>
       <p>
-        <strong>Custom Laboratory Prototyping</strong> &mdash; <em>Hardware Innovation</em> <span class="font-mono text-xs text-muted-foreground float-right">June 2026</span>
+        <strong>Custom Laboratory Prototyping</strong> &mdash; <em>Hardware Innovation</em>
+        <span class="font-mono text-xs text-muted-foreground float-right">June 2026</span>
       </p>
       <ul>
-        <li>Designed and prototyped a custom, 3D-printed sliding stand integrated with linear rails to facilitate high-precision well-plate testing workflows.</li>
+        <li>
+          Designed and prototyped a custom, 3D-printed sliding stand integrated with linear rails to
+          facilitate high-precision well-plate testing workflows.
+        </li>
       </ul>
 
       <h2 id="technical-competencies">Technical Competencies</h2>
       <p>
-        <strong>Laboratory &amp; Quantitative:</strong> Mechanical characterization and indentation testing, synthetic hydrogel data models, material structural analysis, and statistical data processing.
+        <strong>Laboratory &amp; Quantitative:</strong> Mechanical characterization and indentation testing,
+        synthetic hydrogel data models, material structural analysis, and statistical data processing.
       </p>
       <p>
-        <strong>Engineering &amp; Digital:</strong> CAD prototyping, 3D printing mechanics, Git/GitHub source deployment, Astro web architecture, and advanced Microsoft Excel formula optimization.
+        <strong>Engineering &amp; Digital:</strong> CAD prototyping, 3D printing mechanics, Git/GitHub
+        source deployment, Astro web architecture, and advanced Microsoft Excel formula optimization.
       </p>
     </div>
   </div>

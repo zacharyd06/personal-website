@@ -3,6 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Icon from "../components/Icon.astro";
 import { SITE } from "../lib/blog-data.js";
+
+// Basic HTML entity encoding to shield email from scraper bots
+const encodedEmail =
+  "&#100;&#114;&#111;&#111;&#103;&#101;&#110;&#122;&#64;&#109;&#99;&#109;&#97;&#115;&#116;&#101;&#114;&#46;&#99;&#97;";
+const mailtoLink =
+  "mailto:&#100;&#114;&#111;&#111;&#103;&#101;&#110;&#122;&#64;&#109;&#99;&#109;&#97;&#115;&#116;&#101;&#114;&#46;&#99;&#97;";
 ---
 
 <BaseLayout
@@ -15,44 +21,98 @@ import { SITE } from "../lib/blog-data.js";
 
     <header class="mt-6">
       <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">Contact</div>
-      <h1 class="mt-2 font-serif text-5xl font-semibold tracking-tight">Say hello.</h1>
+      <h1 class="mt-2 font-serif text-5xl font-semibold tracking-tight">Reach out.</h1>
       <p class="mt-4 max-w-xl text-muted-foreground">
-        Notes, corrections, pitches, or just a thought. We read everything and reply to most of it.
+        Reach out here for research collaborations, project inquiries, or professional
+        opportunities.
       </p>
     </header>
 
     <div class="mt-12 grid gap-12 lg:grid-cols-[1fr_240px]">
       <form data-contact-form class="space-y-5">
         <div>
-          <label for="name" class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Name</label>
-          <input id="name" required class="mt-2 w-full border-0 border-b border-input bg-transparent py-2 text-base outline-none focus:border-primary" />
+          <label
+            for="name"
+            class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Name</label
+          >
+          <input
+            id="name"
+            required
+            class="mt-2 w-full border-0 border-b border-input bg-transparent py-2 text-base outline-none focus:border-primary"
+          />
         </div>
         <div>
-          <label for="email" class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Email</label>
-          <input id="email" type="email" required class="mt-2 w-full border-0 border-b border-input bg-transparent py-2 text-base outline-none focus:border-primary" />
+          <label
+            for="email"
+            class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Email</label
+          >
+          <input
+            id="email"
+            type="email"
+            required
+            class="mt-2 w-full border-0 border-b border-input bg-transparent py-2 text-base outline-none focus:border-primary"
+          />
         </div>
         <div>
-          <label for="message" class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Message</label>
-          <textarea id="message" required rows="6" class="mt-2 w-full border-0 border-b border-input bg-transparent py-2 text-base outline-none focus:border-primary"></textarea>
+          <label
+            for="message"
+            class="text-xs font-medium uppercase tracking-wider text-muted-foreground"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            required
+            rows="6"
+            class="mt-2 w-full border-0 border-b border-input bg-transparent py-2 text-base outline-none focus:border-primary"
+          ></textarea>
         </div>
-        <button type="submit" class="rounded-md bg-foreground px-6 py-2.5 text-sm font-medium text-background hover:opacity-90">
+        <button
+          type="submit"
+          class="rounded-md bg-foreground px-6 py-2.5 text-sm font-medium text-background hover:opacity-90"
+        >
           Send
         </button>
-        <p data-contact-sent class="text-sm text-primary" role="status" hidden>Thanks &mdash; we'll be in touch.</p>
+        <p data-contact-sent class="text-sm text-primary" role="status" hidden>
+          Thanks for reaching out! I'll be in touch.
+        </p>
       </form>
 
       <aside class="space-y-6 border-l border-border pl-8 lg:block">
         <div>
-          <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Elsewhere</div>
+          <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Elsewhere
+          </div>
           <ul class="mt-3 space-y-3 text-sm">
-            <li><a href="mailto:hello@example.com" class="flex items-center gap-2 hover:text-primary"><Icon name="mail" class="h-3.5 w-3.5" /> hello@example.com</a></li>
-            <li><a href="https://x.com/quietpages" class="flex items-center gap-2 hover:text-primary"><Icon name="twitter" class="h-3.5 w-3.5" /> @quietpages</a></li>
-            <li><a href="/rss.xml" class="flex items-center gap-2 hover:text-primary"><Icon name="rss" class="h-3.5 w-3.5" /> RSS feed</a></li>
+            <li>
+              <a href={mailtoLink} class="flex items-center gap-2 hover:text-primary">
+                <Icon name="mail" class="h-3.5 w-3.5" />
+                <span set:html={encodedEmail} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/zachary-droogendyk/"
+                class="flex items-center gap-2 hover:text-primary"
+                ><Icon name="linkedin" class="h-3.5 w-3.5" /> zachary-droogendyk</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://orcid.org/0009-0000-9610-0476"
+                class="flex items-center gap-2 hover:text-primary"
+                ><Icon name="orcid" class="h-3.5 w-3.5" /> ORCID iD</a
+              >
+            </li>
           </ul>
         </div>
         <div>
-          <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Pitches</div>
-          <p class="mt-2 text-sm text-muted-foreground">We commission essays from new contributors a few times a year. Send a short paragraph about what you'd like to write.</p>
+          <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Availability
+          </div>
+          <p class="mt-2 text-sm text-muted-foreground">
+            I check my inbox regularly. For urgent academic or time-sensitive research matters,
+            please use my institutional email above.
+          </p>
         </div>
       </aside>
     </div>
